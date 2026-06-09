@@ -52,6 +52,17 @@ export const members: MemberProfile[] = [
     photo: `${import.meta.env.BASE_URL}members/xie-rongbin.jpg`,
   },
   {
+    id: 'wang-zhicun',
+    name: '王志存',
+    role: '科研助理',
+    category: 'research-staff',
+    year: '在组科研人员',
+    direction: '晶圆级碳纳米管水平阵列制备与器件',
+    note: '开展晶圆级碳纳米管水平阵列制备及相关器件研究。',
+    email: 'leowangzhicun@163.com',
+    photo: `${import.meta.env.BASE_URL}members/wang-zhicun.jpg`,
+  },
+  {
     id: 'postdoc-placeholder',
     name: '博士后信息待更新',
     role: '博士后',
