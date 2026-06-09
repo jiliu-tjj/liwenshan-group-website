@@ -116,6 +116,7 @@ export const members: MemberProfile[] = [
     direction: '碳纳米管微电子器件',
     note: '聚焦碳纳米管微电子器件的制备、表征与集成应用研究。',
     email: 'yingnan.yang@sjtu.edu.cn',
+    photo: `${import.meta.env.BASE_URL}members/yang-yingnan.jpg`,
   },
   {
     id: 'alumni-1',
