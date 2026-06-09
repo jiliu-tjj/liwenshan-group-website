@@ -10,7 +10,6 @@ export const siteConfig = {
 
 export const navItems = [
   { label: '首页', href: '#/' },
-  { label: '研究方向', href: '#/research' },
   { label: '导师介绍', href: '#/advisor' },
   { label: '团队成员', href: '#/members' },
   { label: '论文成果', href: '#/publications' },

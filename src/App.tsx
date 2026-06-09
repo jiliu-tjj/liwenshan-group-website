@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
-import ResearchPage from './pages/ResearchPage'
 import AdvisorPage from './pages/AdvisorPage'
 import MembersPage from './pages/MembersPage'
 import PublicationsPage from './pages/PublicationsPage'
@@ -30,12 +29,12 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/research" element={<ResearchPage />} />
           <Route path="/advisor" element={<AdvisorPage />} />
           <Route path="/members" element={<MembersPage />} />
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/recruitment" element={<RecruitmentPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </main>
       <Footer />
