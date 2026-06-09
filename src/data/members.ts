@@ -106,6 +106,7 @@ export const members: MemberProfile[] = [
     direction: '碳纳米管电子器件',
     note: '研究方向探索中，聚焦碳纳米管电子器件前沿领域。',
     email: 'me_tianjunjian@sina.com',
+    photo: `${import.meta.env.BASE_URL}members/tian-junjian.jpg`,
   },
   {
     id: 'yang-yingnan',
