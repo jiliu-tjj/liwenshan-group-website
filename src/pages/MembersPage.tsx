@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { CalendarDays, FlaskConical, UserRound } from 'lucide-react'
+import { CalendarDays, FlaskConical, Mail, UserRound } from 'lucide-react'
 import {
   filterMembers,
   memberCategories,
@@ -15,6 +15,7 @@ const fadeIn = {
 }
 
 const roleMarks: Record<MemberProfile['category'], string> = {
+  'research-staff': 'RS',
   postdoc: 'PD',
   'assistant-professor': 'AP',
   phd: 'PhD',
@@ -38,8 +39,17 @@ function MemberCard({ member, index }: { member: MemberProfile; index: number })
       className="academic-card group p-5 transition-all duration-300 hover:-translate-y-1 hover:border-sjtu-red/20 hover:shadow-xl sm:p-6"
     >
       <div className="mb-5 flex items-start gap-4">
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-sjtu-blue/10 bg-gradient-to-br from-sjtu-blue/10 via-white to-sjtu-red/10 text-sm font-semibold text-sjtu-blue">
-          {roleMarks[member.category]}
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-sjtu-blue/10 bg-gradient-to-br from-sjtu-blue/10 via-white to-sjtu-red/10 text-sm font-semibold text-sjtu-blue">
+          {member.photo ? (
+            <img
+              src={member.photo}
+              alt={`${member.name}照片`}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            roleMarks[member.category]
+          )}
         </div>
         <div className="min-w-0">
           <h3 className="text-xl font-semibold leading-snug text-gray-800">{member.name}</h3>
@@ -58,6 +68,15 @@ function MemberCard({ member, index }: { member: MemberProfile; index: number })
           <FlaskConical size={17} className="mt-1 shrink-0 text-sjtu-gold" />
           <span>{member.direction}</span>
         </p>
+        {member.email && (
+          <a
+            href={`mailto:${member.email}`}
+            className="flex gap-2 transition-colors hover:text-sjtu-red"
+          >
+            <Mail size={17} className="mt-1 shrink-0 text-sjtu-gold" />
+            <span>{member.email}</span>
+          </a>
+        )}
         <p className="flex gap-2 border-t border-gray-100 pt-3 text-gray-400">
           <UserRound size={17} className="mt-1 shrink-0 text-gray-300" />
           <span>{member.note}</span>
