@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { CalendarDays, FlaskConical, Mail, UserRound } from 'lucide-react'
 import {
@@ -37,8 +38,11 @@ function MemberCard({ member, index }: { member: MemberProfile; index: number })
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04, duration: 0.35, ease: 'easeOut' }}
-      className="academic-card group p-5 transition-all duration-300 hover:-translate-y-1 hover:border-sjtu-red/20 hover:shadow-xl sm:p-6"
     >
+      <Link
+        to={`/members/${member.id}`}
+        className="academic-card group block p-5 transition-all duration-300 hover:-translate-y-1 hover:border-sjtu-red/20 hover:shadow-xl sm:p-6"
+      >
       <div className="mb-5 flex items-start gap-4">
         <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-sjtu-blue/10 bg-gradient-to-br from-sjtu-blue/10 via-white to-sjtu-red/10 text-sm font-semibold text-sjtu-blue">
           {member.photo ? (
@@ -83,6 +87,7 @@ function MemberCard({ member, index }: { member: MemberProfile; index: number })
           <span>{member.note}</span>
         </p>
       </div>
+      </Link>
     </motion.article>
   )
 }

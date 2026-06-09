@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import AdvisorPage from './pages/AdvisorPage'
 import MembersPage from './pages/MembersPage'
+import MemberDetailPage from './pages/MemberDetailPage'
 import PublicationsPage from './pages/PublicationsPage'
 import NewsPage from './pages/NewsPage'
 import RecruitmentPage from './pages/RecruitmentPage'
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/advisor" element={<AdvisorPage />} />
           <Route path="/members" element={<MembersPage />} />
+          <Route path="/members/:id" element={<MemberDetailPage />} />
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/recruitment" element={<RecruitmentPage />} />
