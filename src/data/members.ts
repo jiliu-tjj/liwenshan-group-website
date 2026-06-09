@@ -108,6 +108,16 @@ export const members: MemberProfile[] = [
     email: 'me_tianjunjian@sina.com',
   },
   {
+    id: 'yang-yingnan',
+    name: '杨英楠',
+    role: '博士研究生',
+    category: 'phd',
+    year: '2021年入学',
+    direction: '碳纳米管微电子器件',
+    note: '聚焦碳纳米管微电子器件的制备、表征与集成应用研究。',
+    email: 'yingnan.yang@sjtu.edu.cn',
+  },
+  {
     id: 'alumni-1',
     name: '校友信息待更新',
     role: 'Alumni',
