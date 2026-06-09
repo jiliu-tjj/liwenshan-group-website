@@ -15,7 +15,8 @@ const fadeIn = {
 }
 
 const roleMarks: Record<MemberProfile['category'], string> = {
-  'research-staff': 'RS',
+  'assistant-researcher': 'AR',
+  'research-assistant': 'RA',
   postdoc: 'PD',
   'assistant-professor': 'AP',
   phd: 'PhD',

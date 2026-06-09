@@ -1,6 +1,7 @@
 export type MemberCategoryId =
   | 'all'
-  | 'research-staff'
+  | 'assistant-researcher'
+  | 'research-assistant'
   | 'postdoc'
   | 'assistant-professor'
   | 'phd'
@@ -30,7 +31,8 @@ export interface MemberProfile {
 
 export const memberCategories: MemberCategory[] = [
   { id: 'all', label: '全部' },
-  { id: 'research-staff', label: '科研人员' },
+  { id: 'assistant-researcher', label: '助理研究员' },
+  { id: 'research-assistant', label: '科研助理' },
   { id: 'postdoc', label: '博士后' },
   { id: 'assistant-professor', label: '助理教授' },
   { id: 'phd', label: '博士研究生' },
@@ -44,7 +46,7 @@ export const members: MemberProfile[] = [
     id: 'xie-rongbin',
     name: '谢荣斌',
     role: '助理研究员',
-    category: 'research-staff',
+    category: 'assistant-researcher',
     year: '在组科研人员',
     direction: '碳纳米管分离提纯、碳纳米管薄膜制备及其在光电器件中的应用研究',
     note: '聚焦碳纳米管材料体系的制备、纯化与光电器件应用。',
@@ -55,7 +57,7 @@ export const members: MemberProfile[] = [
     id: 'wang-zhicun',
     name: '王志存',
     role: '科研助理',
-    category: 'research-staff',
+    category: 'research-assistant',
     year: '在组科研人员',
     direction: '晶圆级碳纳米管水平阵列制备与器件',
     note: '开展晶圆级碳纳米管水平阵列制备及相关器件研究。',
