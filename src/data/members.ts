@@ -129,6 +129,7 @@ export const members: MemberProfile[] = [
     year: '2021—2026',
     direction: '水平碳纳米管阵列介电泳组装研究',
     note: '毕业后入职中国航天科工集团。',
+    photo: `${import.meta.env.BASE_URL}members/wang-kai.jpg`,
   },
 ]
 
