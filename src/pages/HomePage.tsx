@@ -247,6 +247,21 @@ function About() {
               <p>本课题组依托<strong className="text-gray-800">上海交通大学机械与动力工程学院</strong>和<strong className="text-gray-800">微纳工程科学全国重点实验室</strong>，聚焦于<strong style={{ color: '#BE1E2D' }}>低维纳米材料高性能电子器件与传感器</strong>的研发。</p>
               <p>课题组以碳纳米管（CNT）等一维/二维纳米材料为核心研究对象，围绕材料可控制备、器件组装、性能表征及系统集成等关键科学问题开展系统性研究，致力于推动后摩尔时代新型半导体器件的突破。</p>
               <p>课题组与德国卡尔斯鲁厄理工学院、英国剑桥大学等多所国际顶尖高校保持密切合作，欢迎具有材料、物理、半导体、微电子背景的同学加入。</p>
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {[
+                  '低维纳米材料薄膜制备与电子器件',
+                  '柔性可穿戴电子器件以及传感器件',
+                  '纳米材料高频电子器件',
+                  '新型纳米材料电子输运特性',
+                ].map((direction, i) => (
+                  <div key={i} className="flex items-start gap-3 rounded-lg border border-gray-200 bg-gray-50/60 px-4 py-3">
+                    <span className="mt-0.5 shrink-0 text-sm font-bold text-sjtu-red">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-base text-gray-700">{direction}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
           <motion.div className="md:col-span-2" variants={fadeIn} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
