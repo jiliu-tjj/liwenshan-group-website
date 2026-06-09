@@ -122,13 +122,13 @@ export const members: MemberProfile[] = [
     photo: `${import.meta.env.BASE_URL}members/yang-yingnan.jpg`,
   },
   {
-    id: 'alumni-1',
-    name: '校友信息待更新',
-    role: 'Alumni',
+    id: 'wang-kai',
+    name: '王凯',
+    role: '博士（已毕业）',
     category: 'alumni',
-    year: '毕业年份待补充',
-    direction: '毕业去向待补充',
-    note: '可补充当前单位或升学去向',
+    year: '2021—2026',
+    direction: '水平碳纳米管阵列介电泳组装研究',
+    note: '毕业后入职中国航天科工集团。',
   },
 ]
 
