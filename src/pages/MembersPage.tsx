@@ -38,55 +38,62 @@ function MemberCard({ member, index }: { member: MemberProfile; index: number })
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04, duration: 0.35, ease: 'easeOut' }}
+      className="h-full"
     >
       <Link
         to={`/members/${member.id}`}
-        className="academic-card group block p-5 transition-all duration-300 hover:-translate-y-1 hover:border-sjtu-red/20 hover:shadow-xl sm:p-6"
+        className="academic-card group flex h-full flex-col p-5 transition-all duration-300 hover:-translate-y-1 hover:border-sjtu-red/20 hover:shadow-xl sm:p-6"
       >
-      <div className="mb-5 flex items-start gap-4">
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-sjtu-blue/10 bg-gradient-to-br from-sjtu-blue/10 via-white to-sjtu-red/10 text-sm font-semibold text-sjtu-blue">
-          {member.photo ? (
-            <img
-              src={member.photo}
-              alt={`${member.name}照片`}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          ) : (
-            roleMarks[member.category]
-          )}
+        {/* Header: photo + name */}
+        <div className="mb-5 flex items-start gap-4">
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-sjtu-blue/10 bg-gradient-to-br from-sjtu-blue/10 via-white to-sjtu-red/10 text-sm font-semibold text-sjtu-blue">
+            {member.photo ? (
+              <img
+                src={member.photo}
+                alt={`${member.name}照片`}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              roleMarks[member.category]
+            )}
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-xl font-semibold leading-snug text-gray-800">{member.name}</h3>
+            <p className="mt-1 inline-flex rounded-md bg-sjtu-red/10 px-2.5 py-1 text-sm font-medium text-sjtu-red">
+              {member.role}
+            </p>
+          </div>
         </div>
-        <div className="min-w-0">
-          <h3 className="text-xl font-semibold leading-snug text-gray-800">{member.name}</h3>
-          <p className="mt-1 inline-flex rounded-md bg-sjtu-red/10 px-2.5 py-1 text-sm font-medium text-sjtu-red">
-            {member.role}
-          </p>
-        </div>
-      </div>
 
-      <div className="space-y-3 text-[15px] leading-relaxed text-gray-500">
-        <p className="flex gap-2">
-          <CalendarDays size={17} className="mt-1 shrink-0 text-sjtu-gold" />
-          <span>{member.year}</span>
-        </p>
-        <p className="flex gap-2">
-          <FlaskConical size={17} className="mt-1 shrink-0 text-sjtu-gold" />
-          <span>{member.direction}</span>
-        </p>
-        {member.email && (
-          <a
-            href={`mailto:${member.email}`}
-            className="flex gap-2 transition-colors hover:text-sjtu-red"
-          >
-            <Mail size={17} className="mt-1 shrink-0 text-sjtu-gold" />
-            <span>{member.email}</span>
-          </a>
-        )}
-        <p className="flex gap-2 border-t border-gray-100 pt-3 text-gray-400">
-          <UserRound size={17} className="mt-1 shrink-0 text-gray-300" />
-          <span>{member.note}</span>
-        </p>
-      </div>
+        {/* Body: fills remaining space */}
+        <div className="flex flex-1 flex-col space-y-3 text-[15px] leading-relaxed text-gray-500">
+          <p className="flex gap-2">
+            <CalendarDays size={17} className="mt-1 shrink-0 text-sjtu-gold" />
+            <span>{member.year}</span>
+          </p>
+          <p className="flex gap-2">
+            <FlaskConical size={17} className="mt-1 shrink-0 text-sjtu-gold" />
+            <span className="line-clamp-2">{member.direction}</span>
+          </p>
+          {member.email && (
+            <a
+              href={`mailto:${member.email}`}
+              className="flex gap-2 truncate transition-colors hover:text-sjtu-red"
+            >
+              <Mail size={17} className="mt-1 shrink-0 text-sjtu-gold" />
+              <span className="truncate">{member.email}</span>
+            </a>
+          )}
+
+          {/* Note pushed to bottom */}
+          <div className="mt-auto border-t border-gray-100 pt-3">
+            <p className="flex gap-2 text-gray-400">
+              <UserRound size={17} className="mt-1 shrink-0 text-gray-300" />
+              <span className="line-clamp-2">{member.note}</span>
+            </p>
+          </div>
+        </div>
       </Link>
     </motion.article>
   )
