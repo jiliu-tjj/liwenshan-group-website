@@ -9,10 +9,10 @@ const fadeIn = {
 
 const education = [
   {
-    label: '博士',
-    year: '2016',
-    school: '德国达姆施塔特工业大学',
-    detail: '材料科学 · 自然科学博士（在卡尔斯鲁厄理工学院纳米技术研究所完成）',
+    label: '学士',
+    year: '',
+    school: '广西大学',
+    detail: '物理学 & 计算机科学 · 双学士学位',
   },
   {
     label: '硕士',
@@ -21,20 +21,19 @@ const education = [
     detail: '材料工程 · 先进炭材料研究部',
   },
   {
-    label: '学士',
-    year: '',
-    school: '广西大学',
-    detail: '物理学 & 计算机科学 · 双学士学位',
+    label: '博士',
+    year: '2016',
+    school: '德国达姆施塔特工业大学',
+    detail: '材料科学 · 自然科学博士（在卡尔斯鲁厄理工学院纳米技术研究所完成）',
   },
 ]
 
 const experience = [
   {
-    label: '副教授',
-    year: '至今',
-    school: '上海交通大学',
-    detail: '机械与动力工程学院 · 微纳工程科学全国重点实验室',
-    highlight: true,
+    label: '高级科学家',
+    year: '2016',
+    school: '德国卡尔斯鲁厄理工学院 (KIT)',
+    detail: '纳米材料高频电子学',
   },
   {
     label: '副研究员',
@@ -43,10 +42,11 @@ const experience = [
     detail: '工程系 · 二维材料射频电子学',
   },
   {
-    label: '高级科学家',
-    year: '2016',
-    school: '德国卡尔斯鲁厄理工学院 (KIT)',
-    detail: '纳米材料高频电子学',
+    label: '副教授',
+    year: '至今',
+    school: '上海交通大学',
+    detail: '机械与动力工程学院 · 微纳工程科学全国重点实验室',
+    highlight: true,
   },
 ]
 
