@@ -101,7 +101,7 @@ export default function AdvisorPage() {
               <div className="md:col-span-8 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
                 <h3 className="text-3xl sm:text-4xl font-bold text-sjtu-blue tracking-wide mb-2">李文山</h3>
                 <p className="text-base sm:text-lg text-sjtu-red font-medium mb-6">
-                  副教授 · 博士生导师
+                  副教授 · 博士生导师 · 微纳工程科学研究中心系所主任
                 </p>
 
                 <div className="space-y-3 text-[15px] text-gray-600">
