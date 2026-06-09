@@ -315,6 +315,13 @@ export default function AdvisorPage() {
                     </div>
                   ))}
                 </div>
+                <div className="mt-5 overflow-hidden rounded-lg border border-slate-200">
+                  <img
+                    src={`${import.meta.env.BASE_URL}advisor/research-overview.jpg`}
+                    alt="研究方向概览图"
+                    className="w-full object-cover"
+                  />
+                </div>
               </section>
 
               <section className="bg-white p-6 shadow-[0_12px_38px_rgba(26,43,79,0.06)] ring-1 ring-slate-200">
