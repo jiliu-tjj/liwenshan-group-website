@@ -64,9 +64,9 @@ export default function MemberDetailPage() {
               {/* Photo */}
               <div className="border-b border-gray-100 bg-gradient-to-br from-sjtu-blue/5 via-white to-sjtu-red/5 p-6 sm:p-8 md:border-b-0 md:border-r md:border-gray-100">
                 <div className="mx-auto aspect-[3/4] max-w-56 overflow-hidden rounded-xl bg-white shadow-sm md:max-w-full">
-                  {member.photo ? (
+                  {(member.detailPhoto || member.photo) ? (
                     <img
-                      src={member.photo}
+                      src={member.detailPhoto || member.photo}
                       alt={`${member.name}照片`}
                       className="h-full w-full object-cover object-center"
                     />

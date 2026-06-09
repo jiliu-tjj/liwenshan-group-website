@@ -26,6 +26,7 @@ export interface MemberProfile {
   note: string
   email?: string
   photo?: string
+  detailPhoto?: string
   link?: string
 }
 
@@ -107,6 +108,7 @@ export const members: MemberProfile[] = [
     note: '研究方向探索中，聚焦碳纳米管电子器件前沿领域。',
     email: 'me_tianjunjian@sina.com',
     photo: `${import.meta.env.BASE_URL}members/tian-junjian.jpg`,
+    detailPhoto: `${import.meta.env.BASE_URL}members/tian-junjian-detail.jpg`,
   },
   {
     id: 'yang-yingnan',
