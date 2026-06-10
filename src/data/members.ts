@@ -63,6 +63,7 @@ export const members: MemberProfile[] = [
     direction: '低维纳米材料薄膜合成及应用、功能纳米器件的研发、纳米材料的组装与反应机理研究',
     note: '博士毕业于苏州大学功能纳米与软物质研究院，先后在SJTU从事博士后与助理研究员工作。聚焦低维纳米材料的可控合成与器件应用。',
     email: 'hzm2023@sjtu.edu.cn',
+    photo: `${import.meta.env.BASE_URL}members/hao-zhengming.jpg`,
   },
   {
     id: 'wang-zhicun',
