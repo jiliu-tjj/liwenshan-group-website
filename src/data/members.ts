@@ -133,6 +133,17 @@ export const members: MemberProfile[] = [
     photo: `${import.meta.env.BASE_URL}members/yang-yingnan.jpg`,
   },
   {
+    id: 'chao-xiyu',
+    name: '晁熙钰',
+    role: '本科生',
+    category: 'undergraduate',
+    year: '2025年加入',
+    direction: '科研实习中，研究方向待定',
+    note: '本科生科研训练，目前在组内进行基础实验训练与科研探索。',
+    email: 'chaoxiyu@sjtu.edu.cn',
+    photo: `${import.meta.env.BASE_URL}members/chao-xiyu.jpg`,
+  },
+  {
     id: 'wang-kai',
     name: '王凯',
     role: '博士（已毕业）',
