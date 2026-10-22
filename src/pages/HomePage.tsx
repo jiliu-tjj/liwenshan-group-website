@@ -19,9 +19,9 @@ const stats = [
 ]
 
 const newsItems = [
-  { date: '2026-05-20', tag: '组内活动', title: '王凯博士顺利完成博士学位论文答辩' },
-  { date: '2025-07-20', tag: '论文发表', title: '课题组在ACS Nano发表碳纳米管介电泳组装最新成果' },
-  { date: '2025-09-15', tag: '学术会议', title: '课题组参加全国纳米材料学术研讨会' },
+  { date: '2026-09-17', tag: '论文发表', title: '课题组在 Small 发表碳纳米管提纯研究论文', href: '#/publications' },
+  { date: '2026-06-10', tag: '展会交流', title: '课题组参加2026未来产业新材料博览会并作展示汇报', href: '#/news' },
+  { date: '2026-05-20', tag: '组内活动', title: '王凯博士顺利完成博士学位论文答辩', href: '#/news' },
 ]
 
 const scienceImages = {
@@ -374,7 +374,7 @@ function News() {
         </motion.div>
         <div className="space-y-0">
           {newsItems.map((item, i) => (
-            <motion.a key={i} href="#/news" variants={fadeIn} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ delay: i * 0.08 }}
+            <motion.a key={i} href={item.href} variants={fadeIn} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ delay: i * 0.08 }}
               className="group flex flex-col gap-2 py-5 border-b border-gray-100 last:border-b-0 hover:bg-gray-50/60 -mx-4 px-4 rounded-lg transition-colors sm:flex-row sm:items-center sm:gap-8 sm:py-6">
               <span className="text-lg text-gray-400 whitespace-nowrap min-w-[100px]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>{item.date}</span>
               <span className="text-sm px-3 py-1 rounded-md font-medium whitespace-nowrap" style={{ background: '#BE1E2D12', color: '#BE1E2D' }}>{item.tag}</span>
