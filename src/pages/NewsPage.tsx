@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion'
 
 const fineBase = `${import.meta.env.BASE_URL}news/fine-2026`
 const defenseBase = `${import.meta.env.BASE_URL}news/wang-kai-defense`
+const liuChangBase = `${import.meta.env.BASE_URL}news/liu-chang-talk-2025`
 
 const articles = [
   {
@@ -43,6 +44,26 @@ const articles = [
       { src: `${defenseBase}/03-defense-report.jpg`, caption: '答辩汇报现场' },
       { src: `${defenseBase}/04-advisor-photo.jpg`, caption: '答辩后与指导教师李文山副教授合影' },
       { src: `${defenseBase}/05-group-photo.jpg`, caption: '答辩委员会与师生合影' },
+    ],
+  },
+  {
+    id: 'liu-chang-talk-2025',
+    date: '2025-12-18',
+    tag: '学术报告',
+    title: '中国科学院金属研究所刘畅研究员来访并作学术报告',
+    subtitle: '报告题目：单壁碳纳米管宏观体及其复合结构的制备与性能研究',
+    cover: `${liuChangBase}/01-title.jpg`,
+    coverAlt: '刘畅研究员学术报告现场',
+    paragraphs: [
+      '2025年12月18日上午，应李文山副教授邀请，中国科学院金属研究所刘畅研究员在上海交通大学机械与动力工程学院高田会堂作题为《单壁碳纳米管宏观体及其复合结构的制备与性能研究》的学术报告。',
+      '刘畅研究员是中国科学院金属研究所先进炭及二维材料研究部主任、博士生导师，主要从事碳纳米管的制备、性能与应用研究，已发表SCI收录论文200余篇，编著出版专著《碳纳米管》，并担任《Carbon》和《Nano Materials Science》期刊副主编。',
+      '报告中，刘畅研究员介绍了采用浮动催化剂化学气相沉积法宏量制备高纯度单壁碳纳米管，并通过气相过滤连续制备大面积高质量薄膜的研究进展；围绕单壁碳纳米管网络结构与相互作用的调控，展示了其在透明导电电极、柔性热电复合薄膜及器件中的应用；还介绍了湿法纺丝制备高电导率、高强度单壁碳纳米管纤维，以及铜包覆单壁碳纳米管核壳复合纤维等工作。',
+      '报告结束后，现场师生围绕相关问题与刘畅研究员进行了交流讨论。',
+    ],
+    gallery: [
+      { src: `${liuChangBase}/01-title.jpg`, caption: '刘畅研究员作学术报告' },
+      { src: `${liuChangBase}/02-speaker.jpg`, caption: '报告现场' },
+      { src: `${liuChangBase}/03-audience.jpg`, caption: '师生交流讨论' },
     ],
   },
 ]
