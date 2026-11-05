@@ -7,7 +7,6 @@ import MembersPage from './pages/MembersPage'
 import MemberDetailPage from './pages/MemberDetailPage'
 import PublicationsPage from './pages/PublicationsPage'
 import NewsPage from './pages/NewsPage'
-import ActivitiesPage from './pages/ActivitiesPage'
 import RecruitmentPage from './pages/RecruitmentPage'
 import Footer from './components/Footer'
 
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/members/:id" element={<MemberDetailPage />} />
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/activities" element={<ActivitiesPage />} />
           <Route path="/recruitment" element={<RecruitmentPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>

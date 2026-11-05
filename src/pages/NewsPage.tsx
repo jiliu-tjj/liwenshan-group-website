@@ -117,9 +117,6 @@ export default function NewsPage() {
                   ))}
                 </div>
               </section>
-              <a href="#/activities" className="block rounded-xl border border-sjtu-red/20 bg-sjtu-red/5 p-4 text-sm font-medium text-sjtu-red hover:bg-sjtu-red/10">
-                浏览课题组文体活动照片 →
-              </a>
             </aside>
           </div>
         </motion.div>

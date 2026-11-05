@@ -14,6 +14,5 @@ export const navItems = [
   { label: '团队成员', href: '#/members' },
   { label: '论文成果', href: '#/publications' },
   { label: '新闻动态', href: '#/news' },
-  { label: '文体活动', href: '#/activities' },
   { label: '招生信息', href: '#/recruitment' },
 ]
